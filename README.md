@@ -48,24 +48,24 @@ python main_2d.py
 
 ```mermaid
 graph TD
-    A[main.py] --> B[game.py]
-    A --> C[gui.py]
+    A[main_2d.py] --> B[game.py]
+    A --> C[tkinter_gui.py]
     B --> D[board.py]
     B --> E[player.py]
     C --> B
     
     subgraph "게임 로직"
-        B[Game 클래스]
-        D[Board 클래스]
-        E[Player 클래스]
+        B[Game 클래스 game.py]
+        D[Board 클래스 board.py]
+        E[Player 클래스 player.py]
     end
     
-    subgraph "사용자 인터페이스"
-        C[GUI 클래스]
+    subgraph "사용자 인터페이스 | GUI 클래스"
+        C[tkinter_gui]
     end
     
     subgraph "실행"
-        A[메인 실행 파일]
+        A[main_2d.py]
     end
 ```
 
