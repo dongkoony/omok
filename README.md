@@ -22,7 +22,7 @@
 
 1. 저장소를 클론합니다:
 ```bash
-git clone <repository-url>
+git clone https://github.com/dongkoony/omok.git
 cd omok
 ```
 
