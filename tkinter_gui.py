@@ -347,7 +347,8 @@ class TkinterGUI:
             if self.game.make_move(row, col):
                 # 돌을 그리기 (승리하지 않은 경우에만)
                 if self.game.get_game_state() == GameState.PLAYING:
-                    self.draw_stone(row, col, current_stone_color)
+                    # 맥/윈도우 차이를 해결하기 위해 약간의 지연 후 돌을 그림
+                    self.root.after(10, lambda: self.draw_stone(row, col, current_stone_color))
                 # 승리한 경우에는 handle_win에서 돌을 그리므로 여기서는 그리지 않음
             else:
                 # 잘못된 이동 표시
